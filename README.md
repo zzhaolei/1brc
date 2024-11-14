@@ -31,3 +31,10 @@ cd 1brc/src/main/python
 python3 create_measurements.py 1000000000
 ```
 生成的数据会在`1brc/measurements.txt`，大约有`15G`左右(平台)。
+
+## 生成基础结果
+复制生成的`1brc/measurements.txt`文件，或直接指定文件路径
+```shell
+go run baseline/main.go measurements.txt > base.txt
+```
+`base.txt`是基线结果，后续的优化可以和这个结果进行对比。
